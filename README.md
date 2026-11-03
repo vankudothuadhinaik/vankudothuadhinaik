@@ -2,7 +2,9 @@
 
 <img src="./hero.svg?v=4" width="100%" alt="Animated midnight-glass hero for Adhi Naik, systems and backend engineer"/>
 
-**SYSTEMS ENGINEERING · BACKEND PLATFORMS · DEVELOPER TOOLS · OPEN SOURCE**
+**BACKEND & SYSTEMS ENGINEERING · DEVELOPER TOOLS · RELIABILITY · OPEN SOURCE**
+
+Integrated M.Tech candidate in Mathematics & Computing at IIT (ISM) Dhanbad · Expected graduation: May 2027
 
 [PROJECTS](#project-table) · [ENGINEERING PRINCIPLES](#engineering-principles) · [OPEN SOURCE](#open-source) · [CONTACT](#connect)
 
@@ -26,7 +28,7 @@
 <tr><td><a href="https://github.com/vankudothuadhinaik/RepoPilot">RepoPilot</a></td><td>Local code indexing, evidence-grounded search, API and dashboard</td><td>Python · SQLite · React</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/FluxQueue">FluxQueue</a></td><td>Durable jobs, leases, idempotency, retries and dead-letter handling</td><td>FastAPI · PostgreSQL</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/uptime-sentinel">Uptime Sentinel</a></td><td>Scheduled checks, incidents, worker coordination and status pages</td><td>FastAPI · PostgreSQL</td></tr>
-<tr><td><a href="https://github.com/vankudothuadhinaik/UPI_Without_Internet">UPI Offline Mesh</a></td><td>Offline-payment prototype, authenticated encryption and replay protection</td><td>Java · Spring Boot</td></tr>
+<tr><td><a href="https://github.com/vankudothuadhinaik/UPI_Without_Internet">UPI Offline Mesh</a></td><td>Local-only offline-payment simulation with encrypted QR payloads and idempotent settlement; API authentication remains unfinished</td><td>Java · Spring Boot</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/DataPulse-Analytics">DataPulse Analytics</a></td><td>Event ingestion, aggregation, migrations and dashboard</td><td>FastAPI · PostgreSQL · React</td></tr>
 </table>
 

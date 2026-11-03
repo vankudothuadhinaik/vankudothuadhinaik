@@ -112,7 +112,7 @@ RepoPilot indexes local codebases and combines incremental indexing, Python symb
 
 **STACK** &nbsp; Python · SQLite/FTS5 · FastAPI · MCP · React · TypeScript
 
-**VERIFICATION** &nbsp; CI exercises Python 3.11/3.12, the offline single- and multi-repository evaluation suites, repository performance benchmarks, Windows file-safety tests, frontend browser tests, Docker/authentication smoke tests, CodeQL, and the optional MCP import. The curated evaluation cases still need independent second-person review; structural citation checks do not prove semantic entailment. Live-provider evaluation is optional and separate from ordinary CI.
+**VERIFICATION** &nbsp; CI exercises Python 3.11/3.12, the offline single- and multi-repository evaluation suites, repository performance benchmarks, Windows file-safety tests, frontend browser tests, Docker/authentication smoke tests, CodeQL, and the optional MCP import. The 41-case evaluation still needs independent second-person review (tracked in [RepoPilot issue #33](https://github.com/vankudothuadhinaik/RepoPilot/issues/33)); structural citation checks do not prove semantic entailment. Live-provider evaluation is optional and separate from ordinary CI.
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/RepoPilot) · [CI &amp; EVALUATION ARTIFACTS ↗](https://github.com/vankudothuadhinaik/RepoPilot/actions) · [EVALUATION LIMITS ↗](https://github.com/vankudothuadhinaik/RepoPilot/blob/main/docs/evaluation.md)
 

@@ -126,7 +126,7 @@ A durable job-processing platform built around validated job submission, tenant-
 
 **STACK** &nbsp; Python · FastAPI · SQLAlchemy · PostgreSQL · Alembic · Docker
 
-**VERIFICATION** &nbsp; Main CI and the documented manual smoke workflow cover database migrations, worker execution, lease/concurrency behavior, API authentication, and container startup. The free-tier hosted endpoint may sleep and has no production availability guarantee. Treat the demo as a portfolio demonstration, not an uptime commitment.
+**VERIFICATION** &nbsp; Main CI and the documented manual smoke workflow cover database migrations, worker execution, lease/concurrency behavior, API authentication, and container startup. Merged PR [#20](https://github.com/vankudothuadhinaik/FluxQueue/pull/20) bounds handler waiting to 30 seconds by default and limits unresolved handler threads to eight per worker process; a timed-out thread may continue running until it exits, so side-effecting handlers must be idempotent. The PR's lint, formatting, unit/API, PostgreSQL concurrency, dependency-audit, CodeQL, and container checks passed. The free-tier hosted endpoint may sleep and has no production availability guarantee. Treat the demo as a portfolio demonstration, not an uptime commitment.
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/FluxQueue) · [CI RUNS ↗](https://github.com/vankudothuadhinaik/FluxQueue/actions) · [API DEMO ↗](https://fluxqueue-api.onrender.com/docs)
 

@@ -154,7 +154,7 @@ An offline-payment prototype exploring encrypted QR payloads, AES-GCM authentica
 
 **STACK** &nbsp; Java 17 · Spring Boot · Cryptography · PostgreSQL · Flyway
 
-**SCOPE &amp; VERIFICATION** &nbsp; The repository implements a backend settlement gateway, QR payment simulation, and server-side store-and-forward/mesh simulation. Native Bluetooth LE/Wi-Fi Direct transport, a native Android client, and real payment rails are not implemented. Java CI includes persistence and production-profile tests; these validate a prototype, not production payment security.
+**SCOPE &amp; VERIFICATION** &nbsp; The repository implements a backend settlement gateway, QR payment simulation, and server-side store-and-forward/mesh simulation. Native Bluetooth LE/Wi-Fi Direct transport, a native Android client, and real payment rails are not implemented. The current REST API lacks user authentication, authorization, and authenticated bridge identity; the project is restricted to isolated local/test use and must not be exposed publicly. Java CI includes persistence and production-profile tests; these validate a prototype, not production payment security.
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/UPI_Without_Internet) · [CI RUNS ↗](https://github.com/vankudothuadhinaik/UPI_Without_Internet/actions) · [DEMO VIDEO ↗](https://youtu.be/_jcLwtK2IOU)
 

@@ -28,6 +28,7 @@ Integrated M.Tech candidate in Mathematics & Computing at IIT (ISM) Dhanbad · E
 <tr><td><a href="https://github.com/vankudothuadhinaik/RepoPilot">RepoPilot</a></td><td>Local code indexing, evidence-grounded search, API and dashboard</td><td>Python · SQLite · React</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/FluxQueue">FluxQueue</a></td><td>Durable jobs, leases, idempotency, retries and dead-letter handling</td><td>FastAPI · PostgreSQL</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/uptime-sentinel">Uptime Sentinel</a></td><td>Scheduled checks, incidents, worker coordination and status pages</td><td>FastAPI · PostgreSQL</td></tr>
+<tr><td><a href="https://github.com/vankudothuadhinaik/StoreForge">StoreForge</a></td><td>Content-addressed object storage, replicated chunks, immutable versions, repair and recovery workflows</td><td>Python · FastAPI · PostgreSQL · React</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/UPI_Without_Internet">UPI Offline Mesh</a></td><td>Local-only offline-payment simulation with encrypted QR payloads and idempotent settlement; API authentication remains unfinished</td><td>Java · Spring Boot</td></tr>
 <tr><td><a href="https://github.com/vankudothuadhinaik/DataPulse-Analytics">DataPulse Analytics</a></td><td>Event ingestion, aggregation, migrations and dashboard</td><td>FastAPI · PostgreSQL · React</td></tr>
 </table>
@@ -142,7 +143,7 @@ A FastAPI service for scheduled HTTP/HTTPS checks, latency and failure history, 
 
 **STACK** &nbsp; Python · FastAPI · PostgreSQL · SQLAlchemy · Docker Compose
 
-**VERIFICATION** &nbsp; PR [#16](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/16) and [#18](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/18) are merged. PR #16 fences expired worker leases before result persistence or rescheduling. PR #18 moves blocking DNS validation off the event loop, bounds it by the monitor-check deadline and a five-second ceiling, and limits concurrent resolver threads. Its recorded CI passed lint, formatting, typing, dependency audit, PostgreSQL concurrency, full tests, migration round-trips, local proxy security integration, production Compose validation, and the registration-to-worker Compose smoke test. The optional external controlled-proxy suite remains skipped; production egress security is not certified. PR [#19](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/19) is merged and bounds DNS validation on monitor creation/update routes by the monitor timeout (capped at five seconds), returning 503 on resolver-capacity exhaustion and 504 on timeout. Its lint, formatting, typing, tests, PostgreSQL concurrency, migrations, local proxy integration, production Compose validation, and Compose smoke checks passed. Paid hosting and production readiness are out of scope.
+**VERIFICATION** &nbsp; PRs [#16](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/16), [#18](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/18), and [#19](https://github.com/vankudothuadhinaik/uptime-sentinel/pull/19) are merged. PR #16 fences expired worker leases before result persistence or rescheduling. PR #18 moves blocking DNS validation off the event loop, bounds it by the monitor-check deadline and a five-second ceiling, and limits concurrent resolver threads. PR #19 applies bounded DNS validation to monitor creation and URL updates, returning 503 on resolver-capacity exhaustion and 504 on timeout. The recorded CI for #18 and #19 passed lint, formatting, typing, tests, PostgreSQL concurrency, migrations, local proxy security integration, production Compose validation, and Compose smoke checks. The optional external controlled-proxy suite remains skipped; production egress security is not certified. Paid hosting and production readiness are out of scope.
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/uptime-sentinel) · [CI RUNS ↗](https://github.com/vankudothuadhinaik/uptime-sentinel/actions) · [VERIFICATION REPORT ↗](https://github.com/vankudothuadhinaik/uptime-sentinel/blob/main/VERIFICATION_REPORT.md) · [RELEASE CHECKLIST ↗](https://github.com/vankudothuadhinaik/uptime-sentinel/blob/main/RELEASE_CHECKLIST.md)
 
@@ -187,15 +188,21 @@ A standard-library Python ETL pipeline for synthetic healthcare encounter events
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/HealthStream-ETL) · [CI RUNS ↗](https://github.com/vankudothuadhinaik/HealthStream-ETL/actions)
 
-### 08 — AQI PREDICTION
+### 08 — STOREFORGE
+
+A Python object-storage prototype with PostgreSQL metadata, three-node replicated chunk storage, immutable object versions, durable repair jobs, per-tenant token isolation, a React dashboard, and backup/restore tooling. The Compose nodes are not independent hardware failure domains. Production deployment remains gated on independent tenant-isolation/security review, deployment TLS/firewall/shared rate limiting, off-host recovery drills, and environment-specific benchmarks. See [release-readiness issue #12](https://github.com/vankudothuadhinaik/StoreForge/issues/12).
+
+[VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/StoreForge) · [CI RUNS ↗](https://github.com/vankudothuadhinaik/StoreForge/actions)
+
+### 09 — AQI PREDICTION
 
 <img src="https://raw.githubusercontent.com/vankudothuadhinaik/vankudothuadhinaik/main/assets/dashboard-aqi.svg" width="100%" alt="AQI forecasting evaluation chart showing chronological test window and persistence baseline"/>
 
-A time-series forecasting exploration for Indian-city AQI, now with a reproducible chronological persistence baseline and input validation. The historical ARIMA/SARIMAX/Prophet metric table remains unverified because its original split and evaluation protocol were not fully documented.
+A time-series forecasting exploration for Indian-city AQI with strict CSV validation, chronological persistence and training-mean baselines, and aggregate/per-series evaluation metrics. The combined evaluation and README update is merged in [PR #8](https://github.com/vankudothuadhinaik/Predicting-the-AQI-of-Indian-Cities-Using-Machine-Learning/pull/8); its tests, baseline runs, notebook checks, dataset checks, and metrics-artifact upload passed CI. Historical ARIMA/SARIMAX/Prophet metrics remain unverified because their original evaluation protocol was not fully documented.
 
 [VIEW SOURCE ↗](https://github.com/vankudothuadhinaik/Predicting-the-AQI-of-Indian-Cities-Using-Machine-Learning) · [BASELINE CI ↗](https://github.com/vankudothuadhinaik/Predicting-the-AQI-of-Indian-Cities-Using-Machine-Learning/actions)
 
-### 09 — TODO LIST MANAGEMENT APPLICATION
+### 10 — TODO LIST MANAGEMENT APPLICATION
 
 <img src="https://raw.githubusercontent.com/vankudothuadhinaik/vankudothuadhinaik/main/assets/dashboard-todo-list.svg" width="100%" alt="Todo List Manager interface showing task entry, filters, completion states, and browser-local persistence"/>
 

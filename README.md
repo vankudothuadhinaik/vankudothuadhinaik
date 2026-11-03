@@ -107,7 +107,7 @@ A C++20 limit-order-book prototype with price-time priority, full and partial fi
 
 ---
 
-### 02 — REPOPILOT
+### 02 — RepoPilot
 
 <img src="https://raw.githubusercontent.com/vankudothuadhinaik/vankudothuadhinaik/main/assets/dashboard-repopilot.svg" width="100%" alt="RepoPilot dashboard showing repository indexing, code search, source-line evidence, and grounded answers"/>
 
@@ -279,7 +279,7 @@ jvm-mcp #230 belongs to another contributor (Chandu0501) and is merged upstream;
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=cpp,java,python,spring,fastapi,react,ts,postgres,git,github,cmake,linux&perline=6" alt="C++, Java, Python, Spring, FastAPI, React, TypeScript, PostgreSQL, Git, GitHub, CMake and Linux technology icons"/>
+<img src="https://skillicons.dev/icons?i=cpp,java,python,spring,fastapi,react,ts,postgres,redis,sqlite,docker,git,github,githubactions,cmake,linux,pytest,nodejs,vite&perline=7" alt="C++, Java, Python, Spring, FastAPI, React, TypeScript, PostgreSQL, Git, GitHub, CMake and Linux technology icons"/>
 
 </div>
 
